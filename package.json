@@ -6,6 +6,7 @@
     "id": "cordova-plugin-cellid",
     "platforms": ["android", "ios"]
   },
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/skol-pro/cordova-plugin-cellid.git"
