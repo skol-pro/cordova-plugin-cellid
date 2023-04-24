@@ -6,6 +6,11 @@
     <description>Get cell ID information</description>
     <license>MIT</license>
     <keywords>cordova,cellid</keywords>
+
+    <js-module src="www/cellid.js" name="CellID">
+        <merges target="window.plugins.cellid" />
+    </js-module>
+    
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="CellIDPlugin">
@@ -23,7 +28,4 @@
         </config-file>
         <source-file src="src/android/CellIDPlugin.java" target-dir="src/com/yourcompany/cellid" />
     </platform>
-    <js-module src="www/cellid.js" name="CellID">
-        <clobbers target="cordova.plugins.cellid"/>
-    </js-module>
 </plugin>
