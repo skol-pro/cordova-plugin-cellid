@@ -14,9 +14,6 @@
         </config-file>
         <source-file src="src/ios/CellIDPlugin.m"/>
         <framework src="CoreTelephony.framework" weak="true"/>
-        <js-module src="www/cellid.js" name="CellID">
-            <clobbers target="cordova.plugins.cellid"/>
-        </js-module>
     </platform>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
@@ -25,8 +22,8 @@
             </feature>
         </config-file>
         <source-file src="src/android/CellIDPlugin.java" target-dir="src/com/yourcompany/cellid" />
-        <js-module src="www/cellid.js" name="CellID">
-            <clobbers target="cordova.plugins.cellid"/>
-        </js-module>
     </platform>
+    <js-module src="www/cellid.js" name="CellID">
+        <clobbers target="cordova.plugins.cellid"/>
+    </js-module>
 </plugin>
