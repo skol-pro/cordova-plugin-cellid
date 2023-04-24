@@ -1,0 +1,18 @@
+{
+  "name": "cordova-plugin-cellid",
+  "version": "0.0.1",
+  "description": "A Cordova plugin to get cell ID information",
+  "cordova": {
+    "id": "cordova-plugin-cellid",
+    "platforms": ["android", "ios"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skol-pro/cordova-plugin-cellid.git"
+  },
+  "author": {
+    "name": "Skol",
+    "email": "skol.pro@gmail.com"
+  },
+  "license": "MIT"
+}
