@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-cellid"
+        version="1.0.0">
+    <name>CellIDPlugin</name>
+    <description>Get cell ID information</description>
+    <license>MIT</license>
+    <keywords>cordova,cellid</keywords>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CellIDPlugin">
+                <param name="ios-package" value="CellIDPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/CellIDPlugin.m"/>
+        <framework src="CoreTelephony.framework" weak="true"/>
+        <js-module src="www/cellid.js" name="CellID">
+            <clobbers target="cordova.plugins.cellid"/>
+        </js-module>
+    </platform>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CellIDPlugin">
+                <param name="android-package" value="com.yourcompany.cellid.CellIDPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/CellIDPlugin.java" target-dir="src/com/yourcompany/cellid" />
+        <js-module src="www/cellid.js" name="CellID">
+            <clobbers target="cordova.plugins.cellid"/>
+        </js-module>
+    </platform>
+</plugin>
